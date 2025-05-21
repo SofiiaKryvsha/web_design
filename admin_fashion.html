@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Style — Адмін-панель</title>
+    <link rel="stylesheet" href="fashion_admin.css">
+</head>
+<body>
+    <section id="background-image">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&auto=format&fit=crop&w=3000&q=60" alt="Fashion Background" />
+    </section>
+    <div id="overlay-effect"></div>
+
+    <header class="header">
+        <div class="logo">Fashion Style Admin</div>
+        <nav class="nav">
+            <a href="#dashboard">Панель</a>
+            <a href="#collection">Колекції</a>
+            <a href="#clients">Клієнти</a>
+            <a href="#events">Покази</a>
+            <a href="#reports">Звіти</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero-title">Fashion Style Адмін</h1>
+        <p class="hero-text">Керуйте модними колекціями, подіями та базою клієнтів.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Колекції</h2>
+            <p>Створюйте, редагуйте та публікуйте нові модні лінії сезону.</p>
+            <a href="#manage-collections" class="hero-btn">Управління колекціями</a>
+        </div>
+        <div class="feature">
+            <h2>Клієнти</h2>
+            <p>Відстежуйте вподобання, історію покупок та взаємодію клієнтів.</p>
+            <a href="#client-insights" class="hero-btn">Переглянути клієнтів</a>
+        </div>
+        <div class="feature">
+            <h2>Покази мод</h2>
+            <p>Організовуйте та публікуйте інформацію про покази та заходи.</p>
+            <a href="#schedule-show" class="hero-btn">Запланувати показ</a>
+        </div>
+    </section>
+
+    <section class="admin-panel">
+        <input type="checkbox" id="toggle-form" class="toggle-form">
+        <label for="toggle-form" class="toggle-btn">Додати нову колекцію</label>
+        <form class="content-form" action="#submit-collection" method="post">
+            <h3>Нова колекція</h3>
+            <label for="collection-name">Назва:</label>
+            <input type="text" id="collection-name" name="collection-name" placeholder="Введіть назву колекції">
+            <label for="season-year">Сезон / Рік:</label>
+            <input type="text" id="season-year" name="season-year" placeholder="Наприклад: Весна 2025">
+            <label for="description">Опис:</label>
+            <textarea id="description" name="description" placeholder="Опишіть стиль та натхнення"></textarea>
+            <button type="submit">Додати</button>
+        </form>
+        <div id="submit-collection">Колекцію додано</div>
+    </section>
+
+    <footer class="footer">
+        © 2025 Fashion Style. Усі права захищені.
+    </footer>
+</body>
+</html>
