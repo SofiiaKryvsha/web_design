@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адмін-панель - Fashion Style</title>
+    <link rel="stylesheet" href="admin_styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="admin-header">
+            <h1>Адмін-панель Fashion Style</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="charts-container">
+            <div class="chart-box">
+                <h2>Продажі за категоріями</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h2>Розподіл товарів за типом</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fashion Style – Адмін-панель</p>
+    </footer>
+
+    <script>
+        // Дані для гістограми
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Жінкам', 'Чоловікам', 'Дітям', 'Аксесуари'],
+                datasets: [{
+                    label: 'Кількість продажів',
+                    data: [120, 90, 60, 30],
+                    backgroundColor: ['#ff6f91', '#6a67ce', '#fddb3a', '#8fd694']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Дані для кругової діаграми
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Жінки', 'Чоловіки', 'Діти', 'Аксесуари'],
+                datasets: [{
+                    label: 'Тип товарів',
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#ff9aa2', '#9ec1cf', '#b5ead7', '#f3d1dc']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>
