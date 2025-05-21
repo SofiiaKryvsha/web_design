@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Адмін-панель - Fashion Style</title>
+    <title>Діаграми - Fashion Style</title>
     <link rel="stylesheet" href="diagrams_styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
